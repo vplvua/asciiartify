@@ -14,6 +14,8 @@ spec:
     spec:
       containers:
         - name: asciiartify-container
-          image: gcr.io/prometheus-429509/asciiartify:latest
+          image: gcr.io/prometheus-429509/asciiartify:v1.0.0-35ee818
           ports:
             - containerPort: 80
+      imagePullSecrets:
+        - name: gcr-secret
