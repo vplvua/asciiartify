@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: asciiartify-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: asciiartify
+  template:
+    metadata:
+      labels:
+        app: asciiartify
+    spec:
+      containers:
+        - name: asciiartify-container
+          image: gcr.io/prometheus-429509/asciiartify:latest
+          ports:
+            - containerPort: 80
