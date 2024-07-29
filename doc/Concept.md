@@ -71,8 +71,8 @@ VSCode Extension
 | Disadvantages       | Requires a lot of resources                                         | Container simulation lacks OS-level isolation, sharing the host’s kernel, which can complicate OS-specific testing | Stripped-down operating system (sans glibc), unique installation approach |
 | Advantages          | A lot of add-ons                                                    | Quick starts and a familiar Docker environment                                                                     | incredibly fast setup times                                               |
 | Image size          | ~188MB                                                              | 3                                                                                                                  | 4                                                                         |
-| Start time          | 2                                                                   | 3                                                                                                                  | 4                                                                         |
-| Memory Usage        | 4.547MiB                                                            | 3                                                                                                                  | 4                                                                         |
+| Start time          | 23s                                                                 | 3                                                                                                                  | 4                                                                         |
+| Memory Usage        | 611.3MiB                                                            | 3                                                                                                                  | 4                                                                         |
 
 ## Conclusion
 
