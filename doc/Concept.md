@@ -56,6 +56,11 @@ k3d makes it very easy to create single- and multi-node k3s clusters in docker, 
 
 Uses k3s instead of standard Kubernetes. This means it inherits k3s’s pros and cons.
 
+Nodes of a k3d cluster are docker containers running a k3s image.
+All Nodes of a k3d cluster are part of the same docker network.
+
+VSCode Extension
+
 ## Comparison table
 
 |                     | minikube                                                            | kind                                                                                                               | k3d                                                                       |
@@ -70,3 +75,6 @@ Uses k3s instead of standard Kubernetes. This means it inherits k3s’s pros and
 | Memory Usage        | 4.547MiB                                                            | 3                                                                                                                  | 4                                                                         |
 
 ## Conclusion
+
+k3d launches clusters faster than Minikube because k3d is optimised to create clusters quickly with fewer resources.
+For test isolation at the operating system level, the minikube VM Driver is simply brilliant.
