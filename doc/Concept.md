@@ -70,11 +70,13 @@ VSCode Extension
 | System requirements | 2 CPUs or more, 2GB of free memory, 20GB of free disk space, Docker | go 1.16+, Docker                                                                                                   | Docker, kubectl                                                           |
 | Disadvantages       | Requires a lot of resources                                         | Container simulation lacks OS-level isolation, sharing the host’s kernel, which can complicate OS-specific testing | Stripped-down operating system (sans glibc), unique installation approach |
 | Advantages          | A lot of add-ons                                                    | Quick starts and a familiar Docker environment                                                                     | incredibly fast setup times                                               |
-| Image size          | 1.26 Gb                                                             | 3                                                                                                                  | 287 MB                                                                    |
-| Start time          | 23s                                                                 | 3                                                                                                                  | 9s                                                                        |
-| Memory Usage        | 611.3MiB                                                            | 3                                                                                                                  | 417MiB                                                                    |
+| Image size          | 1.26 Gb                                                             | 974 MB                                                                                                             | 287 MB                                                                    |
+| Start time          | 23s                                                                 | 22s                                                                                                                | 9s                                                                        |
+| Memory Usage        | 611.3MiB                                                            | 672Mib                                                                                                             | 417MiB                                                                    |
 
 ## Conclusion
 
 k3d launches clusters faster than Minikube because k3d is optimised to create clusters quickly with fewer resources.
 For test isolation at the operating system level, the minikube VM Driver is simply brilliant.
+
+If speed is important, then definitely k3d. If you need to get closer to the real work environment, then choose minikube.
