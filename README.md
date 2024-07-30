@@ -1,46 +1,89 @@
-# Getting Started with Create React App
+# ASCIIArtify
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ASCIIArtify is a React-based web application that transforms images into ASCII art.
 
-## Available Scripts
+## Prerequisites
 
-In the project directory, you can run:
+Before you begin, ensure you have met the following requirements:
 
-### `npm start`
+1. You have installed Node.js (version 22.5.1 or later)
+2. You have installed Docker and Make
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Installation
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+To install ASCIIArtify, follow these steps:
 
-### `npm test`
+### Clone the repository:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+git clone https://github.com/vplvua/asciiartify.git
+```
 
-### `npm run build`
+### Navigate to the project directory:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+cd asciiartify
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Install the dependencies:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+npm ci
+```
 
-### `npm run eject`
+## Using ASCIIArtify
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+To use ASCIIArtify, follow these steps:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### To run the app in development mode:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
+npm start
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Open http://localhost:3000 to view it in the browser.
 
-## Learn More
+### To build the app for production:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+npm run build
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### To run tests:
+
+```
+npm test
+```
+
+## Docker
+
+To build and run the Docker image:
+
+### Build the image:
+
+```
+make image
+```
+
+### Run the container:
+
+```
+make run
+```
+
+The app will be available at http://localhost:8080.
+
+## Deployment
+
+This project is set up for deployment to Kubernetes. The `deployment.yaml` and `service.yaml` files in the root directory define the Kubernetes resources.
+
+To deploy:
+
+### Ensure you have kubectl configured to communicate with your Kubernetes cluster.
+
+### Apply the Kubernetes configurations:
+
+```
+kubectl apply -f deployment.yaml
+kubectl apply -f service.yaml`
+```
