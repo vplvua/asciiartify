@@ -98,3 +98,7 @@ For the AsciiArtify startup, it is recommended to use k3d for the PoC for the fo
 2. Resource efficiency: k3d uses lightweight containers, allowing efficient use of local machine resources.
 
 Minikube and kind are also good options, but for AsciiArtify's specific needs, k3d offers an optimal balance between simplicity, speed, and functionality.
+
+## Demo k3d
+
+![Run cluster in k3d](./demo.gif)
