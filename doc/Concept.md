@@ -103,7 +103,7 @@ Minikube and kind are also good options, but for AsciiArtify's specific needs, k
 
 ![Run cluster in k3d](./demo.gif)
 
-# Use command
+### Use command
 
 ```
 k3d cluster create asciiartify
