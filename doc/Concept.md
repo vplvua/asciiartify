@@ -102,3 +102,17 @@ Minikube and kind are also good options, but for AsciiArtify's specific needs, k
 ## Demo k3d
 
 ![Run cluster in k3d](./demo.gif)
+
+# Use command
+
+```
+k3d cluster create asciiartify
+k3d image import gcr.io/prometheus-429509/asciiartify:v1.0.0-cb8cbd1 -c asciiartify
+kubectl apply -f deployment.yaml
+kubectl apply -f service.yaml
+kubectl get pods
+kubectl get services
+kubectl port-forward svc/asciiartify-service 8080:80
+k3d cluster stop asciiartify
+k3d cluster delete <cluster-name>
+```
