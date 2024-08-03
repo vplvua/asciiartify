@@ -46,6 +46,10 @@ kubectl port-forward svc/argocd-server -n argocd 8080:443
 
 After that, open your browser and follow the link: [https://localhost:8080](https://localhost:8080). Use the admin login and the password received in the previous step to log in.
 
+## Demo starting Argo CD
+
+![Run Argo CD](./argocd.gif)
+
 # Argo CD architecture overview
 
 <img src="argocd_architecture.webp" alt="Argo CD architecture" width="500"/>
