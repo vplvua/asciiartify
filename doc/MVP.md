@@ -4,6 +4,8 @@ This file describes the process of creating a cluster using k3d, installing Argo
 
 ![Run AsciiArtify in cluster](./asciiartify.gif)
 
+![AutoSync in ArgoCD](./sync.gif)
+
 ## Creating the Cluster
 
 Create a cluster using k3d:
