@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Define command-line arguments
+NAMESPACE=$1
+RESOURCE_TYPE=$2
+KUBECTL_COMMAND=$3  # Additional argument for the kubectl command (for example, "top")
+
+# Checking for all the necessary arguments
+if [ $# -lt 3 ]; then
+    echo "Usage: $0 <namespace> <resource_type> <kubectl_command>"
+    exit 1
+fi
+
+# Retrieve resource usage statistics from Kubernetes
+kubectl $KUBECTL_COMMAND $RESOURCE_TYPE -n $NAMESPACE | tail -n +2 | while read line
+do
+  # Extract CPU and memory usage from the output
+  NAME=$(echo $line | awk '{print $1}')
+  CPU=$(echo $line | awk '{print $2}')
+  MEMORY=$(echo $line | awk '{print $3}')
+
+  # Output the statistics to the console
+  echo "$RESOURCE_TYPE, $NAMESPACE, $NAME, $CPU, $MEMORY"
+done
